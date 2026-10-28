@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #070913;
+  --color-surface: #0E1326;
+  --color-surface-card: #0F162E;
+  --color-border: rgba(99, 102, 241, 0.18);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #F1F5F9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070913;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphic card utility */
+.glass-card {
+  background: linear-gradient(135deg, rgba(15, 22, 46, 0.75) 0%, rgba(11, 16, 36, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.glass-card-interactive {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Vibrant Glow Effects */
+.glow-gradient-radial {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+/* Smooth Focus Ring */
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
